@@ -1,0 +1,208 @@
+
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "helpers/variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+
+
+header{
+    height: 380px;
+    background-image: url(../img/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 130px;
+    
+    h1{
+        margin-bottom: 50px;
+    }
+    select{
+        cursor: pointer;
+        background-color: rgba(255,255,255,0.7);
+        width: 80%;
+        height: 48px;
+        padding: 10px;
+        border-radius: 3px;
+        border: 3px solid #fff;
+        // 插入「向下的 icon」
+        background-image: url(../img/icons_down.svg);
+        background-size: 25px 25px;
+        background-repeat: no-repeat;
+        background-position: 96% 50%;
+        // remove the default arrow
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        @media(min-width: 576px){
+            width: 452px;
+        }
+    }
+}
+.goTop{
+    width: 40px;
+    z-index: 10;
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    display: none;
+}
+.popular{
+    width: 80%;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: -50px auto 0 auto;
+    padding-top: 20px;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.20);
+    .popular-title{
+        font-size: 18px;
+        text-align: center;
+    }
+    @media(min-width: 992px){
+        width: 800px;
+        .popular-title{
+            text-align: left;
+            padding: 0 30px;
+        }
+    }
+}
+.button-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+    button{
+        color: #fff;
+        width: 50%;
+        margin: 5px 0;
+        font-size: 20px;
+    }
+    @media(min-width: 992px){
+        flex-direction: row;
+        justify-content: center;
+        button{
+            width: 130px;
+            margin: 3px 12px;
+        }
+    }
+}
+
+.info{
+    margin: 80px 20px;
+    .info-district{
+        text-align: center;
+        color: #8A82CC;
+        margin-bottom: 30px;
+    }
+    @media(min-width: 768px){
+        margin: 80px 50px;
+    }
+}
+.info-box{
+    width: 100%;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.20);
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    .info-img{
+        width: 100%;
+        height: 155px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+}
+.info-title{
+    background-image: linear-gradient(-180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.7) 100%);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    p{
+        margin: 0 20px;
+    }
+    .attraction-name{
+        font-size: 20px;
+        @media(min-width: 768px){
+            font-size: 24px;
+        }
+    }
+    .attraction-district{
+        font-size: 14px;
+        @media(min-width: 768px){
+            font-size: 16px;           
+        }
+    }
+}
+.info-text{
+    margin: 15px 20px 0 20px;
+}
+.text-layout{
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    img{
+        height: 20px;
+    }
+    p{
+        margin: 0 0 0 10px;
+    }    
+}
+.text-layout-2{
+    margin-bottom: 6px;
+    img{
+        height: 20px;
+    }
+    p{
+        margin: 0 0 0 10px;
+    }
+    @media(min-width: 576px){
+        display: flex;
+        align-items: center;
+    }  
+}
+.free{
+    display: flex;
+    margin-top: 6px;
+    align-items: center;
+    @media(min-width: 576px){
+        margin-top: 0;
+    }
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    a{
+        margin: 0 15px;
+        text-decoration: none;
+        color: darkolivegreen;
+        font-weight: bold;    
+    }
+    a:hover{
+        color: #559AC8;
+    }
+    a.active{
+        color: #559AC8;
+    }
+}
+
+footer{
+    background-color: #559AC8;
+    padding: 20px 0 4px 0;
+}
+
+
+
+
+
+
+

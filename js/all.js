@@ -29,7 +29,7 @@ xhr.onload = function(){
 }
 
 function check(currentValue){
-    if(zone.indexOf(currentValue) == -1){
+    if(zone.indexOf(currentValue) === -1){
         zone.push(currentValue);
     }
 }
@@ -53,7 +53,6 @@ function initInfo(){
     let infoStr = ''; // 組「景點資訊」的字串
 
     for (let i = 0; i < dataLen; i++) {
-        
         infoStr += `
             <div class="col-lg-6">
                 <div class="info-box">
@@ -115,7 +114,7 @@ function showInfo(e){
     let title = ''; // 頁面標題
 
     for (let i = 0; i < dataLen; i++){
-        if (currentValue == data[i].Zone){
+        if (currentValue === data[i].Zone){
             title = data[i].Zone; // 頁面標題
 
             infoStr += `
@@ -160,10 +159,10 @@ function showInfo(e){
 // user 從「熱門行政區」選擇
 // 綁定監聽事件
 buttonWrap.addEventListener('click', btnShowInfo, false); // 監聽「外層的 div」，來偵測裡面的「每一個 button」
-                
+
 function btnShowInfo(e){
     let currentButton = e.target.nodeName; // 撈出「現在點擊的是什麼元素」
-    if (currentButton == 'BUTTON'){
+    if (currentButton === 'BUTTON'){
         showInfo(e); // 注意！這裡的小括號內，要帶入「參數 e」             
     }
 }
@@ -186,12 +185,7 @@ function showGoTop(){
 goTopBtn.addEventListener('click', goTop, false);
 
 function goTop(e){
-    e.preventDefault(); // 要記得加上！！
-    
+    e.preventDefault(); // 要記得加上！！    
     window.scrollTo(0, 0);
-    
 }
-                
-                
-                
-                
+
